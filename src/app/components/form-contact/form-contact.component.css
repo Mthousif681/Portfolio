@@ -1,0 +1,13 @@
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+mat-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  width: 100%;
+}

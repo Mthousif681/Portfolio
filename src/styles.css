@@ -1,0 +1,208 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Add your preferred font */
+}
+
+/* Wrapper to ensure full height layout */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Main content area, flexible to push footer down */
+main {
+  flex: 1;
+  padding: 20px; /* Optional padding */
+}
+
+/* Navigation bar styles */
+nav.navbar {
+  background-color: #333;
+  color: white;
+}
+
+nav.navbar .navbar-brand {
+  color: white;
+}
+
+nav.navbar .nav-link {
+  color: white;
+}
+
+/* Active link styling */
+.nav-link.active {
+  font-weight: bold;
+}
+/* .home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  max-width: 600px; 
+}
+
+.profile-details h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 10px 0;
+} */
+
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 1px;
+}
+
+/* Profile Section */
+.profile-section {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Profile Photo */
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4CAF50;
+}
+
+/* Profile Details */
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Name Styling */
+.profile-name {
+  font-size: 28px;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.profile-name span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Summary and Description */
+.profile-summary {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.profile-description {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+.hero {
+  text-align: center;
+  padding: 100px 0;
+  background: linear-gradient(45deg, #007bff, #6c757d);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+section {
+  margin: 50px 0;
+}
+
+/* Card Styling for Projects */
+.card {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Footer styling */
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Ensures the footer is pushed to the bottom */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  nav.navbar .navbar-nav {
+    flex-direction: column;
+  }
+}

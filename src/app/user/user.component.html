@@ -1,0 +1,35 @@
+<h2>User Component</h2>
+
+<!-- One-way data binding -->
+<p>Name: {{ name }}</p>
+
+<!-- Two-way binding -->
+<input [(ngModel)]="name" placeholder="Edit name" />
+
+<!-- Structural Directive -->
+<button (click)="showDetails = !showDetails">
+  {{ showDetails ? 'Hide' : 'Show' }} Details
+</button>
+
+<div *ngIf="showDetails">
+  <p>Details are visible.</p>
+</div>
+
+<!-- *ngFor directive -->
+<ul>
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul>
+
+<!-- Attribute Directives -->
+<p [ngClass]="{ 'highlight': showDetails }" [ngStyle]="{ color: showDetails ? 'green' : 'red' }">
+  Status: {{ showDetails ? 'Active' : 'Inactive' }}
+</p>
+
+
+<div>
+  <label>
+    Name : 
+  </label>
+  <input type="text" [(ngModel)]="email"/>
+  <input type="password" id="email" value="{{ showDetails ? 'admin@123' : '123'}}"/>
+</div>

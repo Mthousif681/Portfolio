@@ -1,0 +1,42 @@
+<section class="container">
+  <h2 class="d-flex justify-content-center mt-0 mb-0 position-relative" style="top: -20px;">About Me</h2>
+    <p>I’m a passionate developer with 2 years of experience in building full-stack applications using Angular, .NET Core, and cloud services like Azure. My expertise lies in crafting efficient, scalable, and user-friendly software solutions tailored to meet real-world challenges.
+    </p>
+      <p> I specialize in backend development with a strong focus on database management using Microsoft SQL Server, implementing secure APIs, and optimizing application performance. From designing dynamic pages in complex systems like IDMACS to developing secure and reliable VCard and banking applications, I thrive on solving complex problems and delivering innovative solutions.
+      
+      In addition to coding, I’m deeply committed to writing clean, maintainable, and well-documented code, ensuring long-term sustainability and collaboration across teams. I have experience working with Agile methodologies, fostering seamless communication and teamwork to achieve project goals effectively.
+      
+      Driven by a mindset of continuous learning, I’m exploring advanced concepts in microservices architecture, DevOps practices, and cloud computing. Whether it’s building web applications, streamlining backend processes, or exploring the latest technologies, I’m always excited to take on new challenges and bring ideas to life through code.
+    </p>
+  <p>Let’s connect and build something amazing together!</p>
+    <!-- <p>With a focus on clean code, efficient architecture, and seamless user experiences, I’ve been working with global organizations to create high-impact solutions. Let’s build something amazing together!</p> -->
+<strong>Tempalte Driven Form</strong>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+
+  <input type="text" name="fullName" [(ngModel)]="user.fullName" required placeholder="Full Name" />
+  <div *ngIf="userForm.submitted && !userForm.controls['fullName']?.valid">Full Name is required. | titleCase</div>
+
+  <input type="email" name="email1" [(ngModel)]="user.email1" required email placeholder="Email" />
+  <div *ngIf="userForm.submitted && !userForm.controls['email1']?.valid">Valid Email is required.</div>
+
+  <input type="password" name="password" [(ngModel)]="user.password" required minlength="6" placeholder="Password" />
+  <div *ngIf="userForm.submitted && !userForm.controls['password']?.valid">Min 6 characters required.</div>
+
+  <button type="submit">Register</button>
+</form>
+<strong>Reactive Form</strong>
+<form [formGroup]="userForm2" (ngSubmit)="onReactiveSubmit()">
+
+  <input type="text" formControlName="fullName" placeholder="Full Name" />
+  <div *ngIf="userForm2.get('fullName')?.invalid && userForm2.get('fullName')?.touched">Full Name is required.</div>
+
+  <input type="email" formControlName="email2" placeholder="Email" />
+  <div *ngIf="userForm2.get('email2')?.invalid && userForm2.get('email2')?.touched">Valid Email is required.</div>
+
+  <input type="password" formControlName="password" placeholder="Password" />
+  <div *ngIf="userForm2.get('password')?.invalid && userForm2.get('password')?.touched">Min 6 characters required.</div>
+
+  <button type="submit">Register</button>
+</form>
+    <app-user></app-user>
+  </section>

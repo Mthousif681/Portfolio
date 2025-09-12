@@ -1,0 +1,32 @@
+
+  <section class="container">
+  <form #myForm="ngForm" action="https://formsubmit.co/mthousif681@gmail.com" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="formData.name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="formData.email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="reason">Reason</label>
+      <select class="form-control" id="reason" name="reason" [(ngModel)]="formData.reason" required>
+        <option value="">Select a reason</option>
+        <option value="1">Human Resourcing>
+        <option value="1">Casual Meeting</option>
+        <option value="2">Project Discussion</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="3" [(ngModel)]="formData.message" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="!myForm.valid">Send Message</button>
+  </form>
+</section>
+
